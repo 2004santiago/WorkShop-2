@@ -12,6 +12,7 @@ jupyter = "^1.1.1"
 python-dotenv = "^1.0.1"
 psycopg2-binary = "^2.9.9"
 sqlalchemy = "^2.0.35"
+matplotlib = "^3.9.2"
 
 
 [build-system]
