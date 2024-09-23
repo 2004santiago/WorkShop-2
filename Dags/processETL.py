@@ -6,9 +6,9 @@ from datetime import datetime
 
 
 default_args = {
-    'owner': 'santiagoLinux',
+    'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime.now(),  
+    'start_date': datetime(2024, 9, 20),  
     'email': ['santiago.gomez_cas@uao.edu.co'],
     'email_on_failure': False,
     'email_on_retry': False,
@@ -17,7 +17,7 @@ default_args = {
 }
 
 with DAG(
-    'api__project_dag',
+    'api_workshop_dag',
     default_args=default_args,
     description='Our first DAG with ETL process!',
     schedule_interval='@daily',
