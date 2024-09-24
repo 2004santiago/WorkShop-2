@@ -175,3 +175,6 @@ client_secret.json
 # .pkl
 spotify_ready_df.pkl
 grammy_ready_df.pkl
+
+spotify_data.pkl
+grammy_awards.pkl
