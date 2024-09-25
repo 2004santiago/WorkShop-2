@@ -7,10 +7,15 @@ Ester workshop seeks to analyze 2 datasets, one with the Grammys delivered and a
 ## Technologies used
 
 Jupyter: manipulation and transformation of all data.
+
 Airflow: Data flows for the ETL of the project.
+
 Power BI: Data visualizations.
+
 Drive: Platform to save a copy of the information.
+
 PosgresSQL: Database to store the data.
+
 
 ## Installation
 
