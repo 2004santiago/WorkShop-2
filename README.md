@@ -57,12 +57,12 @@ localhost:8080
 
 ## visualizations
 
-![image.png](image.png)
+![image.png](image/image.png)
 
-![image.png](image%201.png)
+![image.png](image/image%201.png)
 
-![image.png](image%202.png)
+![image.png](image/image%202.png)
 
 ## Dashboard
 
-![image.png](image%203.png)
+![image.png](image/image%203.png)
