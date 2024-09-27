@@ -49,6 +49,18 @@ pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}
 ```
 
 ```python
+pip uninstall sqlalchemy 
+```
+
+```python
+pip install apache-airflow
+```
+
+```python
+pip install pandas==2.1.4 
+```
+
+```python
 airflow standalone
 ```
 
@@ -57,6 +69,10 @@ Then enter the browser and paste the link:
 ```bash
 localhost:8080
 ```
+
+## Airflow
+
+![image.png](image/imageAir.png)
 
 ---
 
