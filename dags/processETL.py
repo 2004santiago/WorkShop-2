@@ -3,9 +3,9 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.models.baseoperator import chain
 from datetime import datetime
-from grammy import load_grammy, check_grammy
-from spotify import load_spotify, check_spotify
-from merge import merge, save_csv, save_DB, save_drive
+from grammyETL import load_grammy, grammy_check
+from spotifyETL import load_spotify, spotify_check
+from merge import merge_all_csv, save_merge_DB, save_drive
 
 
 default_args = {
@@ -34,7 +34,7 @@ with DAG(
     
     transform_DB = PythonOperator(
         task_id='transform_DB',
-        python_callable=check_grammy,
+        python_callable=grammy_check,
         provide_context=True,
     )
     
@@ -46,25 +46,19 @@ with DAG(
     
     transform_csv = PythonOperator(
         task_id='transform_csv',
-        python_callable=check_spotify,
+        python_callable=spotify_check,
         provide_context=True,
     )
     
     merge_data = PythonOperator(
         task_id='merge',
-        python_callable=merge,
-        provide_context=True,
-    )
-    
-    save_merge = PythonOperator(
-        task_id='save_merge',
-        python_callable=save_csv,
+        python_callable=merge_all_csv,
         provide_context=True,
     )
     
     save_merge_DB = PythonOperator(
         task_id='save_merge_DB',
-        python_callable=save_DB,
+        python_callable=save_merge_DB,
         provide_context=True,
     )
     
@@ -73,7 +67,8 @@ with DAG(
         python_callable=save_drive,
         provide_context=True,
     )
+    
 
 
-extract_DB >> transform_DB >> merge_data >> save_merge >> save_merge_DB >> save_merge_drive
+extract_DB >> transform_DB >> merge_data >> save_merge_DB >> save_merge_drive
 extract_csv >> transform_csv
