@@ -57,8 +57,16 @@ pip install apache-airflow
 ```
 
 ```python
-pip install pandas==2.1.4 
+pip install pandas==2.1.4
 ```
+
+After we go to airflow directory an in airflow.cfg we change the path to:
+
+```python
+dags_folder = /this_is/your/path/WorkShop-2/dags
+```
+
+to charge our Dags.
 
 ```python
 airflow standalone
