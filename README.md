@@ -82,7 +82,7 @@ localhost:8080
 
 ![image.png](image/imageAir.png)
 
-[Watch the video](image/Workshop2.mp4)
+[Watch the video on Google Drive](https://drive.google.com/file/d/1EWWstVq72A_GlmfGSReMHbA_jTC17-HH/view?usp=sharing)
 
 ---
 
