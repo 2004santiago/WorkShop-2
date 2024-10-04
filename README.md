@@ -82,6 +82,8 @@ localhost:8080
 
 ![image.png](image/imageAir.png)
 
+[Watch the video](image/Workshop2.mp4)
+
 ---
 
 ## visualizations
